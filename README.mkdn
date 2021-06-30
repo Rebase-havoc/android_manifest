@@ -16,8 +16,8 @@ You will need to set up some directories in your build environment.
 To create them run:
 
 ```bash
-   mkdir -p ~/bin
-   mkdir -p ~/havoc
+mkdir -p ~/bin
+mkdir -p ~/havoc
 ```
 
 Install the Repository
@@ -25,13 +25,15 @@ Install the Repository
 
 Enter the following to download the "repo" binary and make it executable:
 
+```bash
 curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
+```
 
 You may need to reboot for these changes to take effect.
 Now enter the following to initialize the repository:
 
 ```bash
-   cd ~/havoc
+cd ~/havoc
 ```
 
 
@@ -39,14 +41,14 @@ To initialize your local repository, use this command:
 ------------------------------------------------------
 
 ```bash
-   repo init -u https://github.com/Havoc-OS/android_manifest.git -b eleven
+repo init -u https://github.com/Havoc-OS/android_manifest.git -b eleven
 ```
   
 To Sync the source:
 ----------------
 
 ```bash
-  repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
 
@@ -57,8 +59,8 @@ Please note that if you are building on Mac OS X, you are required to install co
 Initialize the environment with the envsetup.sh script. Note that replacing "source" with a single dot saves a few characters, and the short form is more commonly used in documentation.
 
 ```bash
-   . build/envsetup.sh
-    brunch
+. build/envsetup.sh
+brunch
 ```
 
 Enter the number of the build you want to start and press enter
